@@ -114,6 +114,8 @@ public class ImBuider {
 	}
 	
 	public static void main(String[] args) {
-		
+		 String tableData1[][] = {{"全宗号", "年度","件号"},{"机构问题", "保管期限", "页号"}};
+         ImBuider.myGraphicsGeneration(tableData1, "E:\\开发\\Such Ji\\归档章.png");
+         ImBuider.myGraphicsGeneration(tableData1, "E:\\开发\\Such Ji\\归档章.jpg");
 	}
 }
