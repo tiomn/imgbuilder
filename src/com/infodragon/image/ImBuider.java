@@ -70,18 +70,18 @@ public class ImBuider {
 			graphics.drawLine(startWidth+2 + k * colwidth, startHeight, startWidth + k * colwidth+2, startHeight + rowheight * (totalrow-1));
 		}
 		//设置字体
-		Font font = new Font("宋体", Font.PLAIN, fontTitileSize);
+		Font font = new Font("潮字社风云简", Font.PLAIN, fontTitileSize);
 		graphics.setFont(font);
 		graphics.setColor(Color.BLACK);
 		//写入内容
 		for (int n = 0; n < cellsValue.length; n++) {
 			for (int l = 0; l < cellsValue[n].length; l++) {
 				if (n == 0) {
-					font = new Font("宋体", Font.PLAIN, fontTitileSize);
+					font = new Font("潮字社风云简", Font.PLAIN, fontTitileSize);
 					graphics.setFont(font);
 
 				} else {
-					font = new Font("宋体", Font.PLAIN, fontTitileSize);
+					font = new Font("潮字社风云简", Font.PLAIN, fontTitileSize);
 					graphics.setFont(font);
 
 				}
