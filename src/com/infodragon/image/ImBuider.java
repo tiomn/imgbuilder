@@ -31,21 +31,21 @@ public class ImBuider {
 		}
 		System.out.println(flength);
 		// 字体大小------小五（12px）
-		int fontTitileSize = 12;
+		int fontTitileSize = 24;
 		// 横线的行数
 		int totalrow = 3;
 		// 竖线的行数
 		int totalcol =cellsValue[0].length+1;
 		// 行高------单行8MM
-		int rowheight = 30;
+		int rowheight = 56;
 		// 图片高度-------高度16MM
-		int imageHeight = 63;
+		int imageHeight = 115;
 		// 起始高度
 		int startHeight = 0;
 		// 起始宽度
 		int startWidth = 0;
 		//设置列宽
-		int colwidth = 56;
+		int colwidth = 84;
 		//设置自动图片宽度
 		int imageWidth = colwidth*(totalcol-1)+3;
 		BufferedImage image = new BufferedImage(imageWidth, imageHeight, BufferedImage.TYPE_INT_RGB);
@@ -70,22 +70,22 @@ public class ImBuider {
 			graphics.drawLine(startWidth+2 + k * colwidth, startHeight, startWidth + k * colwidth+2, startHeight + rowheight * (totalrow-1));
 		}
 		//设置字体
-		Font font = new Font("潮字社风云简", Font.PLAIN, fontTitileSize);
+		Font font = new Font("宋体", Font.PLAIN, fontTitileSize);
 		graphics.setFont(font);
 		graphics.setColor(Color.BLACK);
 		//写入内容
 		for (int n = 0; n < cellsValue.length; n++) {
 			for (int l = 0; l < cellsValue[n].length; l++) {
 				if (n == 0) {
-					font = new Font("潮字社风云简", Font.PLAIN, fontTitileSize);
+					font = new Font("宋体", Font.PLAIN, fontTitileSize);
 					graphics.setFont(font);
 
 				} else {
-					font = new Font("潮字社风云简", Font.PLAIN, fontTitileSize);
+					font = new Font("宋体", Font.PLAIN, fontTitileSize);
 					graphics.setFont(font);
 
 				}
-				graphics.drawString(cellsValue[n][l].toString(), startWidth + colwidth * l + 5, startHeight + rowheight * (n+1)-9);
+				graphics.drawString(cellsValue[n][l].toString(), startWidth + colwidth * l+6, startHeight + rowheight * (n+1)-15);
 			}
 
 		}
@@ -114,8 +114,7 @@ public class ImBuider {
 	}
 	
 	public static void main(String[] args) {
-		 String tableData1[][] = {{"全宗号", "年度","件号"},{"机构问题", "保管期限", "页号"}};
-         ImBuider.myGraphicsGeneration(tableData1, "E:\\开发\\Such Ji\\归档章.png");
-         ImBuider.myGraphicsGeneration(tableData1, "E:\\开发\\Such Ji\\归档章.jpg");
+//		String tableData1[][] = {{"为期该", "请勿且","湿哒哒"},{"创造性", "2019", "切尔在"}};
+//        ImBuider.myGraphicsGeneration(tableData1, "C:\\Users\\tm1612\\Desktop\\20190618.png");
 	}
 }
